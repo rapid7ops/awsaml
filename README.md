@@ -14,6 +14,7 @@ In order to rotate credentials, Awsaml takes the following actions
 3. Generates new temporary AWS keys by calling the [AssumeRoleWithSAML][] API.*
 4. Writes the new temporary credentials to disk.
 
+
 This flow repeats every hour so the user always has a valid set of AWS keys
 while the application's running. Awsaml reuses the SAML response from the
 identity provider, so the user doesn't need to reauthenticate every time.
@@ -21,6 +22,15 @@ identity provider, so the user doesn't need to reauthenticate every time.
 You can grab prebuilt binaries for Mac, Linux, and Window from [the releases page][releases].
 
 *This API is used to fetch credentials if the Okta SAML + AWS configuration is used. Alternatively, Awsaml also supports the Just In Time IAM tool in Rapid7's InsightCloudSec product.
+
+## Setup on macOS with Homebrew
+
+A caskfile is bundled with the repository, to install Awsaml with [Homebrew][] simply run:
+
+```
+wget https://raw.githubusercontent.com/rapid7ops/awsaml/master/brew/cask/awsaml.rb
+brew install --cask awsaml.rb
+```
 
 ## Configuration
 
@@ -262,14 +272,6 @@ yarn build
 Supported architectures are `ia32`, `x64` , `armv7l`,
 `arm64`, `mips64el`, `universal`, or `all`.
 
-## Setup on macOS with Homebrew
-
-A caskfile is bundled with the repository, to install Awsaml with [Homebrew][] simply run:
-
-```
-wget https://raw.githubusercontent.com/rapid7/awsaml/master/brew/cask/awsaml.rb
-brew install --cask awsaml.rb
-```
 
 There might be an error and warning prompt but it should start succesfully downloading right after
 When download is succesfully installed, a `awsaml was successfully installed!` prompt is displayed
