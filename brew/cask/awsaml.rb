@@ -11,7 +11,7 @@ cask "awsaml" do
 
     preflight do
       system_command "/usr/bin/git",
-                     args: ["clone", "https://github.com/r7ops/awsaml", "/tmp/awsaml"],
+                     args: ["clone", "https://github.com/r7ops/awsaml", "/tmp/awsaml"]
     end
 
     preflight do
