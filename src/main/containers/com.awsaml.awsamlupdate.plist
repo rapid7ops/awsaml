@@ -1,0 +1,17 @@
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.awsaml.awsamlupdate</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>$HOME/Library/awsaml</string>
+    </array>
+
+    <key>StartInterval</key>
+    <integer>14400</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
