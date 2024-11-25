@@ -28,8 +28,8 @@ You can grab prebuilt binaries for Mac, Linux, and Window from [the releases pag
 A caskfile is bundled with the repository, to install Awsaml with [Homebrew][] simply run:
 
 ```
-wget https://raw.githubusercontent.com/rapid7ops/awsaml/master/brew/cask/awsaml.rb
-brew install --cask awsaml.rb
+git clone https://github.com/rapid7ops/awsaml
+brew install --cask awsaml/brew/cask/awsaml.rb
 ```
 
 ## Configuration
