@@ -29,7 +29,7 @@ A caskfile is bundled with the repository, to install Awsaml with [Homebrew][] s
 
 ```
 git clone https://github.com/rapid7ops/awsaml
-brew install --cask awsaml/brew/cask/awsaml.rb
+brew install --cask awsaml/brew/cask/install.rb
 ```
 
 ## Configuration
