@@ -1,4 +1,4 @@
-cask "awsaml" do
+cask "install" do
     version "3.1.3"
     sha256 "1cf9093156370380b328e3250a3ff7649968aee78c8bfcb09badbcdec05e36a0"
 
