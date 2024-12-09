@@ -13,7 +13,12 @@ cask "install" do
       system_command "/usr/bin/git",
                      args: ["clone", "https://github.com/rapid7ops/awsaml", "/tmp/awsaml"]
     end
-
+  
+    preflight do
+        system_command "/bin/mkdir",
+                       args: ["-p", "#{ENV["HOME"]}/Library/LaunchAgents"]
+     end 
+  
     preflight do
         system_command "/usr/bin/unzip",
                        args: ["/tmp/awsaml/src/main/containers/awsaml.zip", "-d", "#{ENV["HOME"]}/Library/"]
