@@ -41,12 +41,12 @@ cask "install" do
   
     postflight do
         system_command "/bin/cp",
-                       args: ["/tmp/awsaml/src/main/containers/#{arch}/awsaml", "#{ENV["HOME"]}/Library/awsaml"]
+                       args: ["/tmp/awsaml/src/main/containers/#{arch}/awsaml", "/usr/local/bin/awsaml"]
       end  
 
     postflight do
         system_command "/bin/chmod",
-                       args: ["+x", "#{ENV["HOME"]}/Library/awsaml"]
+                       args: ["+x", "/usr/local/bin/Library/awsaml"]
       end 
     app "awsaml.app"
 
