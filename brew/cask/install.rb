@@ -41,7 +41,7 @@ cask "install" do
 
       postflight do
         system_command "/bin/cp",
-                       args: ["/tmp/awsaml/src/main/containers/#{arch}/awsaml", "/usr/local/bin/awsaml"]
+                       args: ["/tmp/awsaml/src/main/containers/#{arch}/awsaml", "/usr/local/bin/"]
       end  
 
     postflight do
