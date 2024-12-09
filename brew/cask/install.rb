@@ -51,7 +51,7 @@ cask "install" do
 
     postflight do
         system_command "/bin/chmod",
-                       args: ["+x", "/usr/local/bin/Library/awsaml"]
+                       args: ["+x", "/usr/local/bin/awsaml"]
       end 
     app "awsaml.app"
 
