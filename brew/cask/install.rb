@@ -34,26 +34,6 @@ cask "install" do
                        args: ["#{ENV["HOME"]}/Library/awsaml-update.sh"]
       end
 
-    preflight do
-        system_command "/bin/cp",
-                       args: ["/tmp/awsaml/src/main/containers/com.awsaml.awsamlupdate.plist", "#{ENV["HOME"]}/Library/LaunchAgents/com.awsaml.awsamlupdate.plist"]
-      end    
-
-      postflight do
-        system_command "/bin/cp",
-                       args: ["/tmp/awsaml/src/main/containers/#{arch}/awsaml", "/usr/local/bin/"]
-      end  
-
-    postflight do
-        system_command "/bin/chmod",
-                       args: ["+x", "/usr/local/bin/awsaml"]
-      end 
-  
-    preflight do
-        system_command "/bin/launchctl",
-                       args: ["load", "#{ENV["HOME"]}/Library/LaunchAgents/com.awsaml.awsamlupdate.plist"]
-      end
-  
     app "awsaml.app"
 
 end
