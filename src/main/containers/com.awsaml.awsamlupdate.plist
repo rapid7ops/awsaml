@@ -5,7 +5,7 @@
 
     <key>ProgramArguments</key>
     <array>
-      <string>$HOME/Library/awsaml</string>
+      <string>/usr/local/bin/awsaml</string>
     </array>
 
     <key>StartInterval</key>
